@@ -1,0 +1,16 @@
+<table>
+    <tr><th>Ongoing deals</th>
+        <th>Brand image</th>
+        <th>Summary</th>
+    </tr>
+    
+    {% for deal in deals %}
+        <tr>
+            <td>{{ deal.start_date }} - {{ deal.end_date }}</td>
+            <td><a href="/{{deal.key.id}}"><img src="{{ deal.brand_image }}" height="40"></a></td>
+            <td>{{ deal.summary }}</td>
+        </tr>
+    {% endfor %}
+    
+</table>
+    
